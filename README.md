@@ -25,11 +25,12 @@
     <a href="https://github.com/SolarSpec/TRPL_Photos"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/SolarSpec/TRPL_Photos">View Demo</a>
-    ·
-    <a href="https://github.com/SolarSpec/TRPL_Photos/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/SolarSpec/TRPL_Photos/issues">Request Feature</a>
+  <a href="https://github.com/SolarSpec/ScriptsAndFunctions"><strong>Explore the docs »</strong></a>
+
+<a href="https://github.com/SolarSpec/ScriptsAndFunctions">View Demo</a> ·
+<a href="https://github.com/SolarSpec/ScriptsAndFunctions/issues/new?labels=bug&template=bug_report.md">Report Bug</a> ·
+<a href="https://github.com/SolarSpec/ScriptsAndFunctions/issues/new?labels=enhancement&template=feature_request.md">Request Feature</a>
+
   </p>
 </div>
 
