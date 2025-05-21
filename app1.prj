@@ -1,0 +1,63 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="155889027" file="C:\Users\raads\OneDrive - Saskatoon Public Schools\Desktop\Week2\app1.prj" location="C:\Users\raads\OneDrive - Saskatoon Public Schools\Desktop\Week2" name="app1" target="target.mlapps" target-name="Package App">
+    <param.appname>app1</param.appname>
+    <param.authnamewatermark>SolarSpec</param.authnamewatermark>
+    <param.email>robert.godin@ubc.ca</param.email>
+    <param.company>SolarSpec</param.company>
+    <param.icon />
+    <param.icons />
+    <param.summary />
+    <param.description />
+    <param.screenshot>C:\Users\raads\AppData\Local\Temp\tp2b27dfa7_ae6c_4422_9864_2ca2ad5d9a07.png</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.output>${PROJECT_ROOT}</param.output>
+    <param.guid>9f77ae6a-a70b-4321-a015-386fb6d52564</param.guid>
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.summary />
+      <param.description />
+      <param.version />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\app1.mlapp</file>
+    </fileset.main>
+    <fileset.depfun />
+    <fileset.resources>
+      <file>${PROJECT_ROOT}\SS_TRPLfit_IRFfit.m</file>
+    </fileset.resources>
+    <fileset.package />
+    <build-deliverables>
+      <file location="C:\Users\raads\OneDrive - Saskatoon Public Schools\Desktop" name="Week2" optional="false">C:\Users\raads\OneDrive - Saskatoon Public Schools\Desktop\Week2</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2024b</root>
+      <toolboxes />
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
