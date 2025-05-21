@@ -65,8 +65,8 @@
 
 <!-- ABOUT THE PROJECT -->
 # About The Project
+![TRPL APPP](..TRPL_Photos/SampleAppScreenshot.PNG)
 
-[![TRPL Fitting Tool Screenshot][product-screenshot]](https://solarspec.ok.ubc.ca/)
 
 This MATLAB application streamlines the process of analyzing Time-Resolved Photoluminescence (TRPL) data by providing a comprehensive tool for:
 - Loading instrument response (IRF) and decay data
