@@ -22,7 +22,7 @@
   <p align="center">
     A MATLAB application for Time-Resolved Photoluminescence (TRPL) data analysis and fitting
     <br />
-    <a href="https://github.com/SolarSpec/TRPL_Photos"><strong>Explore the docs »</strong></a>
+    
     <br />
     <br />
     <a href="https://github.com/SolarSpec/ScriptsAndFunctions"><strong>Explore the docs »</strong></a> 
