@@ -33,8 +33,7 @@
   </p>
 </div>
 
-<!-- FEATURED SCREENSHOT -->
-[![TRPL Fitting Tool Screenshot][product-screenshot]](https://solarspec.ok.ubc.ca/)
+
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -62,8 +61,12 @@
   </ol>
 </details>
 
+
+
 <!-- ABOUT THE PROJECT -->
 # About The Project
+
+[product-screenshot]: TRPL_Photos/SampleAppScreenshot.PNG
 
 This MATLAB application streamlines the process of analyzing Time-Resolved Photoluminescence (TRPL) data by providing a comprehensive tool for:
 - Loading instrument response (IRF) and decay data
@@ -73,6 +76,8 @@ This MATLAB application streamlines the process of analyzing Time-Resolved Photo
 - Exporting both plots and numerical outputs
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
 
 ### Built With
 
@@ -84,6 +89,8 @@ This MATLAB application streamlines the process of analyzing Time-Resolved Photo
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+
 <!-- GETTING STARTED -->
 # Getting Started
 
@@ -91,14 +98,166 @@ To begin using this app, follow these simple steps to ensure you have the necess
 
 ### Prerequisites
 
-1. MATLAB (R2020b or newer recommended)  
-2. Required MATLAB Toolboxes:  
-   - Parallel Computing Toolbox  
-   - Optimization Toolbox  
-   - Statistics and Machine Learning Toolbox  
+1. MATLAB (R2020b or newer recommended)
+2. Required MATLAB Toolboxes:
+   - Parallel Computing Toolbox
+   - Optimization Toolbox
+   - Statistics and Machine Learning Toolbox
 
 ### Installation
 
-1. Clone the repository  
+1. Clone the repository
    ```sh
    git clone https://github.com/SolarSpec/TRPL_Photos.git
+   ```
+
+2. Install the application in MATLAB
+   ```
+   Double-click the app1.mlappinstall file in the repository
+   ```
+
+3. Access the app
+   ```
+   Navigate to the APPS tab in MATLAB
+   Find the app under 'MY APPS'
+   Add it to your favorites for quick access
+   ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+### Basic Workflow
+
+1. **Load IRF Data**
+   - Click "Load IRF Data"
+   - Select an Excel file with time (ns) in first column and IRF amplitude in second column
+   - The IRF curve will be plotted in the top axes
+
+2. **Load Decay Data**
+   - Must load IRF first
+   - Click "Load Decay Data"
+   - Select similarly formatted Excel file
+   - The app will interpolate to match IRF's time axis if needed
+   - Raw TRPL decay will be plotted in bottom axes
+
+3. **Set Fit Parameters**
+   - Conv Pad: Points to pad each side when convolving (default: 15)
+   - Window Lower/Upper Bound: Time window for fitting (default: 48-80 ns)
+   - Window Baseline Start/End: Indices for baseline estimation (default: 900-1100)
+
+4. **Perform the Fit**
+   - Click "Fit"
+   - Select kinetic model from dialog (e.g., one exponential, two exponentials, power law)
+   - The app will:
+     - Spawn parallel pool
+     - Trim trailing zeros
+     - Extract fit window ± padding
+     - Build constrained optimization problem
+     - Run MultiStart with 50 starts to minimize χ²
+     - Display fit and residual plots with legends and metrics
+
+5. **Export Results**
+   - Use "Export TRPL Decay" and "Export Residuals" for vector plots (.emf for Windows, .pdf for Mac)
+   - "Export Data" saves a .mat file containing:
+     - Raw time data
+     - IRF data
+     - Decay data
+     - Chosen parameters
+     - Fit outputs (parameters, function values, ChiSq, RedChiSq)
+
+### Advanced Features
+
+- **Model Selection**: Choose from various kinetic models including:
+  - Single exponential
+  - Double exponential
+  - Power law
+  - Mixed models
+
+- **Optimization**: The app uses MultiStart with fmincon for robust global optimization
+
+- **Visualization**: 
+  - Log-scale plots of data vs. total fit
+  - Individual component visualization
+  - Residual analysis
+  - Baseline correction
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ROADMAP -->
+## Roadmap
+
+* [X] Load and process IRF data
+* [X] Load and process decay data
+* [X] Implement multiple kinetic models
+* [X] Add parallel processing support
+* [X] Export functionality for plots and data
+* [ ] Add error bar support
+* [ ] Implement batch processing
+* [ ] Add more kinetic models
+* [ ] Improve visualization options
+
+See the [open issues](https://github.com/SolarSpec/TRPL_Photos/issues) for a full list of proposed features and known issues.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- LICENSE -->
+## License
+
+Distributed under the BSD 3-Clause License. See `LICENSE.txt` for more information.
+
+Please refer to the TDMS reader directory to view the accompanying [`license.txt`](https://github.com/SolarSpec/ScriptsAndFunctions/blob/main/Matlab%20TDMS%20reader/license.txt)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- CONTACT -->
+## Contact
+
+SolarSpec - [SolarSpec Website](https://solarspec.ok.ubc.ca/) - rsarke01@student.ubc.ca
+
+Project Link: [https://github.com/SolarSpec/ScriptsAndFunctions](https://github.com/SolarSpec/ScriptsAndFunctions)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* [Group Leader - Dr. Robert Godin](https://solarspec.ok.ubc.ca/people/)
+* [The Entire SolarSpec Team](https://solarspec.ok.ubc.ca/people/)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/SolarSpec/TRPL_Photos.svg?style=for-the-badge
+[contributors-url]: https://github.com/SolarSpec/TRPL_Photos/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/SolarSpec/TRPL_Photos.svg?style=for-the-badge
+[forks-url]: https://github.com/SolarSpec/TRPL_Photos/network/members
+[stars-shield]: https://img.shields.io/github/stars/SolarSpec/TRPL_Photos.svg?style=for-the-badge
+[stars-url]: https://github.com/SolarSpec/TRPL_Photos/stargazers
+[issues-shield]: https://img.shields.io/github/issues/SolarSpec/TRPL_Photos.svg?style=for-the-badge
+[issues-url]: https://github.com/SolarSpec/TRPL_Photos/issues
+[license-shield]: https://img.shields.io/github/license/SolarSpec/TRPL_Photos.svg?style=for-the-badge
+[license-url]: https://github.com/SolarSpec/TRPL_Photos/blob/main/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/raad-sarker-37935a286/
+[product-screenshot]: TRPL_Photos/screenshot.png
