@@ -258,6 +258,8 @@ Project Link: [https://github.com/SolarSpec/ScriptsAndFunctions](https://github.
 [issues-url]: https://github.com/SolarSpec/ScriptsAndFunctions/issues
 [license-shield]: https://img.shields.io/github/license/SolarSpec/ScriptsAndFunctions.svg?style=for-the-badge
 [license-url]: https://github.com/SolarSpec/ScriptsAndFunctions/blob/main/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin
+
 
 [linkedin-url]: https://www.linkedin.com/in/raad-sarker-37935a286/
 [product-screenshot]: TRPL_Photos/screenshot.png
