@@ -195,10 +195,7 @@ To begin using this app, follow these simple steps to ensure you have the necess
 * [X] Implement multiple kinetic models
 * [X] Add parallel processing support
 * [X] Export functionality for plots and data
-* [ ] Add error bar support
-* [ ] Implement batch processing
-* [ ] Add more kinetic models
-* [ ] Improve visualization options
+
 
 See the [open issues](https://github.com/SolarSpec/TRPL_Photos/issues) for a full list of proposed features and known issues.
 
