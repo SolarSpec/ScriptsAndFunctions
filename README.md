@@ -248,16 +248,16 @@ Project Link: [https://github.com/SolarSpec/ScriptsAndFunctions](https://github.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/SolarSpec/TRPL_Photos.svg?style=for-the-badge
-[contributors-url]: https://github.com/SolarSpec/TRPL_Photos/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/SolarSpec/TRPL_Photos.svg?style=for-the-badge
-[forks-url]: https://github.com/SolarSpec/TRPL_Photos/network/members
-[stars-shield]: https://img.shields.io/github/stars/SolarSpec/TRPL_Photos.svg?style=for-the-badge
-[stars-url]: https://github.com/SolarSpec/TRPL_Photos/stargazers
-[issues-shield]: https://img.shields.io/github/issues/SolarSpec/TRPL_Photos.svg?style=for-the-badge
-[issues-url]: https://github.com/SolarSpec/TRPL_Photos/issues
-[license-shield]: https://img.shields.io/github/license/SolarSpec/TRPL_Photos.svg?style=for-the-badge
-[license-url]: https://github.com/SolarSpec/TRPL_Photos/blob/main/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[contributors-shield]: https://img.shields.io/github/contributors/SolarSpec/ScriptsAndFunctions.svg?style=for-the-badge
+[contributors-url]: https://github.com/SolarSpec/ScriptsAndFunctions/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/SolarSpec/ScriptsAndFunctions.svg?style=for-the-badge
+[forks-url]: https://github.com/SolarSpec/ScriptsAndFunctions/network/members
+[stars-shield]: https://img.shields.io/github/stars/SolarSpec/ScriptsAndFunctions.svg?style=for-the-badge
+[stars-url]: https://github.com/SolarSpec/ScriptsAndFunctions/stargazers
+[issues-shield]: https://img.shields.io/github/issues/SolarSpec/ScriptsAndFunctions.svg?style=for-the-badge
+[issues-url]: https://github.com/SolarSpec/ScriptsAndFunctions/issues
+[license-shield]: https://img.shields.io/github/license/SolarSpec/ScriptsAndFunctions.svg?style=for-the-badge
+[license-url]: https://github.com/SolarSpec/ScriptsAndFunctions/blob/main/LICENSE
+
 [linkedin-url]: https://www.linkedin.com/in/raad-sarker-37935a286/
 [product-screenshot]: TRPL_Photos/screenshot.png
