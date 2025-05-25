@@ -1,14 +1,18 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="166265837" file="C:\Users\raads\OneDrive - Saskatoon Public Schools\Desktop\Week2\app1.prj" location="C:\Users\raads\OneDrive - Saskatoon Public Schools\Desktop\Week2" name="app1" target="target.mlapps" target-name="Package App">
-    <param.appname>app1</param.appname>
+  <configuration build-checksum="2861298826" file="C:\Users\raads\OneDrive - Saskatoon Public Schools\Desktop\Week2\TRPL.prj" location="C:\Users\raads\OneDrive - Saskatoon Public Schools\Desktop\Week2" name="TRPL" target="target.mlapps" target-name="Package App">
+    <param.appname>TRPL</param.appname>
     <param.authnamewatermark>SolarSpec</param.authnamewatermark>
     <param.email>robert.godin@ubc.ca</param.email>
     <param.company />
-    <param.icon />
-    <param.icons />
+    <param.icon>${PROJECT_ROOT}\TRPL_resources\icon_24.png</param.icon>
+    <param.icons>
+      <file>${PROJECT_ROOT}\TRPL_resources\icon_48.png</file>
+      <file>${PROJECT_ROOT}\TRPL_resources\icon_24.png</file>
+      <file>${PROJECT_ROOT}\TRPL_resources\icon_16.png</file>
+    </param.icons>
     <param.summary />
     <param.description />
-    <param.screenshot>C:\Users\raads\AppData\Local\Temp\tp6e773157_7392_4aa4_83a3_14da7aaed714.png</param.screenshot>
+    <param.screenshot>C:\Users\raads\AppData\Local\Temp\tpf73eac09_c1ab_415f_8372_cbebab2234eb.png</param.screenshot>
     <param.version>1.0</param.version>
     <param.products.name />
     <param.products.id />
@@ -18,8 +22,6 @@
     <param.guid>3ba5c594-d28e-4a37-9786-08955ae0185a</param.guid>
     <unset>
       <param.company />
-      <param.icon />
-      <param.icons />
       <param.summary />
       <param.description />
       <param.version />
