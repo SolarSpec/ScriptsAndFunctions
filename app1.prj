@@ -1,22 +1,23 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="155889027" file="C:\Users\raads\OneDrive - Saskatoon Public Schools\Desktop\Week2\app1.prj" location="C:\Users\raads\OneDrive - Saskatoon Public Schools\Desktop\Week2" name="app1" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="166265837" file="C:\Users\raads\OneDrive - Saskatoon Public Schools\Desktop\Week2\app1.prj" location="C:\Users\raads\OneDrive - Saskatoon Public Schools\Desktop\Week2" name="app1" target="target.mlapps" target-name="Package App">
     <param.appname>app1</param.appname>
     <param.authnamewatermark>SolarSpec</param.authnamewatermark>
     <param.email>robert.godin@ubc.ca</param.email>
-    <param.company>SolarSpec</param.company>
+    <param.company />
     <param.icon />
     <param.icons />
     <param.summary />
     <param.description />
-    <param.screenshot>C:\Users\raads\AppData\Local\Temp\tp2b27dfa7_ae6c_4422_9864_2ca2ad5d9a07.png</param.screenshot>
+    <param.screenshot>C:\Users\raads\AppData\Local\Temp\tp6e773157_7392_4aa4_83a3_14da7aaed714.png</param.screenshot>
     <param.version>1.0</param.version>
     <param.products.name />
     <param.products.id />
     <param.products.version />
     <param.platforms />
     <param.output>${PROJECT_ROOT}</param.output>
-    <param.guid>9f77ae6a-a70b-4321-a015-386fb6d52564</param.guid>
+    <param.guid>3ba5c594-d28e-4a37-9786-08955ae0185a</param.guid>
     <unset>
+      <param.company />
       <param.icon />
       <param.icons />
       <param.summary />
