@@ -14,7 +14,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/SolarSpec/TRPL_Photos">
-    <img src="ScriptsAndFunctions/TRPL_Photos/logo.png" alt="SolarSpec" width="160" height="120">
+    <img src="TRPL_Photos/logo.png" alt="SolarSpec" width="160" height="120">
   </a>
 
 <h3 align="center">Enhanced TRPL Fitting Tool</h3>
