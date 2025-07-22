@@ -65,7 +65,7 @@
 
 <!-- ABOUT THE PROJECT -->
 # About The Project
-![TRPL APP](ScriptsAndFunctions/TRPL_Photos/SampleAppScreenshot.PNG)
+![TRPL APP](TRPL_Photos/SampleAppScreenshot.PNG)
 
 
 This enhanced MATLAB application revolutionizes Time-Resolved Photoluminescence (TRPL) data analysis by providing an intuitive and powerful tool featuring:
