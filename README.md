@@ -14,13 +14,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/SolarSpec/TRPL_Photos">
-    <img src="TRPL_Photos/logo.png" alt="SolarSpec" width="160" height="120">
+    <img src="ScriptsAndFunctions/TRPL_Photos/logo.png" alt="SolarSpec" width="160" height="120">
   </a>
 
-<h3 align="center">TRPL Fitting Tool</h3>
+<h3 align="center">Enhanced TRPL Fitting Tool</h3>
 
   <p align="center">
-    A MATLAB application for Time-Resolved Photoluminescence (TRPL) data analysis and fitting
+    An advanced MATLAB application for Time-Resolved Photoluminescence (TRPL) data analysis with interactive controls and flexible model building
     <br />
     <a href="https://github.com/SolarSpec/ScriptsAndFunctions"><strong>Explore the docs »</strong></a>
     <br />
@@ -65,15 +65,18 @@
 
 <!-- ABOUT THE PROJECT -->
 # About The Project
-![TRPL APPP](TRPL_Photos/SampleAppScreenshot.PNG)
+![TRPL APP](ScriptsAndFunctions/TRPL_Photos/SampleAppScreenshot.PNG)
 
 
-This MATLAB application streamlines the process of analyzing Time-Resolved Photoluminescence (TRPL) data by providing a comprehensive tool for:
-- Loading instrument response (IRF) and decay data
-- Selecting fitting parameters
-- Running multi-start deconvolution fits against various kinetic models
-- Visualizing results
-- Exporting both plots and numerical outputs
+This enhanced MATLAB application revolutionizes Time-Resolved Photoluminescence (TRPL) data analysis by providing an intuitive and powerful tool featuring:
+- Interactive data loading with intelligent column selection
+- Dynamic model building with customizable component combinations
+- Real-time interactive range selection for fitting windows and baseline regions
+- Advanced parameter validation and table-based parameter management
+- Generalized fitting algorithms supporting arbitrary kinetic model combinations
+- Professional data visualization with log-scale plotting and component breakdown
+- Comprehensive export capabilities for both plots and numerical data
+- Robust error handling and user feedback systems
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -82,10 +85,10 @@ This MATLAB application streamlines the process of analyzing Time-Resolved Photo
 ### Built With
 
 * [MATLAB](https://www.mathworks.com/products/matlab.html)
+* [MATLAB App Designer](https://www.mathworks.com/products/matlab/app-designer.html)
 * [Parallel Computing Toolbox](https://www.mathworks.com/products/parallel-computing.html)
 * [Optimization Toolbox](https://www.mathworks.com/products/optimization.html)
-<!-- * [Image Processing Toolbox](https://www.mathworks.com/help/images/)
-* [Curve Fitting Toolbox](https://www.mathworks.com/help/curvefit/) -->
+* [Statistics and Machine Learning Toolbox](https://www.mathworks.com/products/statistics.html)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -94,11 +97,11 @@ This MATLAB application streamlines the process of analyzing Time-Resolved Photo
 <!-- GETTING STARTED -->
 # Getting Started
 
-To begin using this app, follow these simple steps to ensure you have the necessary prerequisites and proper installation.
+To begin using this enhanced app, follow these simple steps to ensure you have the necessary prerequisites and proper installation.
 
 ### Prerequisites
 
-1. MATLAB (R2020b or newer recommended)
+1. MATLAB (R2021a or newer recommended for full App Designer support)
 2. Required MATLAB Toolboxes:
    - Parallel Computing Toolbox
    - Optimization Toolbox
@@ -113,7 +116,7 @@ To begin using this app, follow these simple steps to ensure you have the necess
 
 2. Install the application in MATLAB
    ```
-   Double-click the app1.mlappinstall file in the repository
+   Double-click the TRPL.mlappinstall file in the ScriptsAndFunctions directory
    ```
 
 3. Access the app
@@ -134,68 +137,110 @@ To begin using this app, follow these simple steps to ensure you have the necess
 
 1. **Load IRF Data**
    - Click "Load IRF Data"
-   - Select an Excel file with time (ns) in first column and IRF amplitude in second column
-   - The IRF curve will be plotted in the top axes
+   - Select an Excel file containing your instrument response function
+   - Choose appropriate columns for time (ns) and IRF amplitude from the dialog
+   - The app automatically detects header rows and provides intelligent column selection
+   - IRF curve will be displayed in the main plot area
 
 2. **Load Decay Data**
-   - Must load IRF first
+   - Ensure IRF data is loaded first
    - Click "Load Decay Data"
-   - Select similarly formatted Excel file
-   - The app will interpolate to match IRF's time axis if needed
-   - Raw TRPL decay will be plotted in bottom axes
+   - Select Excel file containing your TRPL decay data
+   - Choose time and decay data columns from the provided options
+   - The app automatically interpolates data to match IRF time axis if needed
+   - Both IRF and decay data will be overlaid on a log-scale plot
 
-3. **Set Fit Parameters**
-   - Conv Pad: Points to pad each side when convolving (default: 15)
-   - Window Lower/Upper Bound: Time window for fitting (default: 48-80 ns)
-   - Window Baseline Start/End: Indices for baseline estimation (default: 900-1100)
+3. **Build Custom Kinetic Model**
+   - Click "Build Model" to access the model builder
+   - Specify number of components for each kinetic type:
+     - Exponential components (with amplitude and lifetime parameters)
+     - Power law components (with amplitude, onset, and alpha parameters)
+     - Second-order kinetic components (with amplitude and kinetic parameters)
+   - The app dynamically generates a parameter table with intelligent initial guesses
 
-4. **Perform the Fit**
-   - Click "Fit"
-   - Select kinetic model from dialog (e.g., one exponential, two exponentials, power law)
-   - The app will:
-     - Spawn parallel pool
-     - Trim trailing zeros
-     - Extract fit window ± padding
-     - Build constrained optimization problem
-     - Run MultiStart with 50 starts to minimize χ²
-     - Display fit and residual plots with legends and metrics
+4. **Configure Fitting Parameters**
+   - **Interactive Range Selection**: 
+     - Toggle "Set Window Bounds" to interactively select fit window using draggable lines
+     - Toggle "Set Baseline Bounds" to define baseline region with visual feedback
+   - **Manual Parameter Entry**:
+     - Conv Pad: Convolution padding in nanoseconds (default: 15)
+     - Window bounds: Time range for fitting analysis
+     - Baseline indices: Region for background estimation
+   - **Parameter Table Management**:
+     - Edit initial guesses, lower bounds, and upper bounds directly in the table
+     - Built-in validation ensures parameter consistency and physical feasibility
 
-5. **Export Results**
-   - Use "Export TRPL Decay" and "Export Residuals" for vector plots (.emf for Windows, .pdf for Mac)
-   - "Export Data" saves a .mat file containing:
-     - Raw time data
-     - IRF data
-     - Decay data
-     - Chosen parameters
-     - Fit outputs (parameters, function values, ChiSq, RedChiSq)
+5. **Execute Fitting Analysis**
+   - Click "Fit" to begin the optimization process
+   - The app performs:
+     - Comprehensive parameter validation
+     - Automatic parallel pool initialization
+     - Data preprocessing and baseline correction
+     - MultiStart global optimization with 50 starting points
+     - Real-time progress monitoring
+   - Results are displayed with:
+     - Log-scale main plot showing data, total fit, and individual components
+     - Linear-scale residual plot for fit quality assessment
+     - Comprehensive fit statistics (χ², reduced χ², component contributions)
+
+6. **Export and Documentation**
+   - **Plot Export**: Choose from multiple formats (PDF, EMF, SVG, .fig) for publication-ready figures
+   - **Data Export**: Save complete analysis results as .mat files including:
+     - Original time series and measurement data
+     - All fitting parameters and bounds
+     - Optimized parameter values and uncertainties
+     - Statistical metrics and component analysis
+     - Complete model configuration
 
 ### Advanced Features
 
-- **Model Selection**: Choose from various kinetic models including:
-  - Single exponential
-  - Double exponential
-  - Power law
-  - Mixed models
+- **Dynamic Model Architecture**: Build models with any combination of:
+  - Multiple exponential decay components
+  - Power law kinetics for dispersive transport
+  - Second-order recombination kinetics
+  - Automatic baseline handling and IRF deconvolution
 
-- **Optimization**: The app uses MultiStart with fmincon for robust global optimization
+- **Interactive Analysis Tools**:
+  - Real-time draggable range selection with visual feedback
+  - Live parameter table editing with instant validation
+  - Automatic data interpolation and time axis matching
+  - Smart baseline estimation from user-defined regions
 
-- **Visualization**: 
-  - Log-scale plots of data vs. total fit
-  - Individual component visualization
-  - Residual analysis
-  - Baseline correction
+- **Robust Optimization Engine**:
+  - Generalized fitting algorithms handle arbitrary model complexity
+  - MultiStart optimization ensures global minimum detection
+  - Parallel processing for enhanced computational efficiency
+  - Comprehensive error handling and convergence diagnostics
+
+- **Professional Visualization**:
+  - Dual-axis plotting (log-scale main plot, linear residuals)
+  - Individual component visualization with automatic legends
+  - Interactive zoom and pan capabilities
+  - Publication-ready export options
+
+- **Data Integrity and Validation**:
+  - Automatic header detection and column mapping
+  - Parameter bound checking and consistency validation
+  - Graceful error handling with informative user feedback
+  - Automatic data preprocessing and quality checks
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
 
-* [X] Load and process IRF data
-* [X] Load and process decay data
-* [X] Implement multiple kinetic models
-* [X] Add parallel processing support
-* [X] Export functionality for plots and data
-
+* [X] Enhanced interactive data loading with intelligent column detection
+* [X] Dynamic model building system for arbitrary kinetic combinations
+* [X] Real-time interactive range selection with visual feedback
+* [X] Comprehensive parameter validation and table management
+* [X] Generalized fitting algorithms for flexible model architecture
+* [X] Advanced parallel processing optimization
+* [X] Professional multi-format export capabilities
+* [X] Robust error handling and user feedback systems
+* [ ] Batch processing capabilities for multiple datasets
+* [ ] Advanced statistical analysis and uncertainty quantification
+* [ ] Model comparison and selection tools
+* [ ] Integration with spectroscopic database systems
 
 See the [open issues](https://github.com/SolarSpec/TRPL_Photos/issues) for a full list of proposed features and known issues.
 
@@ -259,4 +304,4 @@ Project Link: [https://github.com/SolarSpec/ScriptsAndFunctions](https://github.
 
 
 [linkedin-url]: https://www.linkedin.com/in/raad-sarker-37935a286/
-[product-screenshot]: TRPL_Photos/screenshot.png
+[product-screenshot]: ScriptsAndFunctions/TRPL_Photos/screenshot.png 
