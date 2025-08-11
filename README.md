@@ -5,7 +5,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![BSD 3-Clause License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -298,10 +298,8 @@ Project Link: [https://github.com/SolarSpec/ScriptsAndFunctions](https://github.
 [stars-url]: https://github.com/SolarSpec/ScriptsAndFunctions/stargazers
 [issues-shield]: https://img.shields.io/github/issues/SolarSpec/ScriptsAndFunctions.svg?style=for-the-badge
 [issues-url]: https://github.com/SolarSpec/ScriptsAndFunctions/issues
-[license-shield]: https://img.shields.io/github/license/SolarSpec/ScriptsAndFunctions.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/badge/License-BSD%203--Clause-blue.svg?style=for-the-badge
 [license-url]: https://github.com/SolarSpec/ScriptsAndFunctions/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin
-
-
 [linkedin-url]: https://www.linkedin.com/in/raad-sarker-37935a286/
 [product-screenshot]: ScriptsAndFunctions/TRPL_Photos/screenshot.png 
